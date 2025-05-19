@@ -1,0 +1,295 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmWithin - Mental Health Support</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adding Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Logo styling */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #594aa5;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .logo-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+            color: #594aa5;
+        }
+        /* Auth links styling */
+        .auth-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .auth-links a {
+            margin-left: 15px;
+            padding: 8px 15px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #594aa5;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .auth-links a:hover {
+            background-color: #3a5a80;
+        }
+        header {
+            position: relative; /* Needed for absolute positioning */
+            padding-top: 70px; /* Added space for logo and auth links */
+            text-align: center;
+        }
+        /* New styles for information sections */
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* Clear floats */
+        }
+        .info-section h2 {
+            color: #594aa5;
+            margin-bottom: 15px;
+        }
+        .info-section h3 {
+            color: #4a6fa5;
+            margin-top: 20px;
+        }
+        .info-section ul {
+            padding-left: 20px;
+        }
+        .info-section li {
+            margin-bottom: 10px;
+        }
+        /* New styles for image layout */
+        .info-content {
+            width: 50%;
+            float: left;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        .info-image {
+            width: 50%;
+            float: right;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .info-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Header title adjustment */
+        header h1 {
+            margin-top: 0;
+            padding-top: 20px;
+        }
+    </style>
+    <script type="module" src="script.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "confetti-js": "https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Added Logo -->
+        <a href="#" class="logo">
+            <i class="fas fa-spa logo-icon"></i>
+            <span>CalmWithin</span>
+        </a>
+        
+        <div class="auth-links">
+            <a href="login.html">Login</a>
+            <a href="sign up.html">Register</a>
+        </div>
+        
+        <h1>Welcome to Your Mental Health Support Space</h1>
+        <nav>
+            <a href="#resources">Resources</a>
+            <a href="#exercises">Exercises</a>
+            <a href="#community">Community</a>
+            <a href="#helpline">Helpline</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Updated Hero Section -->
+<section id="hero">
+    <h2>Your Journey to Wellness Starts Here</h2>
+    <h3>Healing takes time, and asking for help is a courageous step</h3>
+    
+    <div class="quote-container">
+        <div class="quote-box">
+            <i class="fas fa-hands-helping"></i>
+            <p>"You're Not Alone"</p>
+        </div>
+        <div class="quote-box">
+            <i class="fas fa-users"></i>
+            <p>"Together Strong"</p>
+        </div>
+        <div class="quote-box">
+            <i class="fas fa-bridge"></i>
+            <p>"Bridge to Better"</p>
+        </div>
+    </div>
+    
+    <a href="#resources" class="btn">Explore Resources</a>
+</section>
+
+        <!-- Updated Understanding Mental Health Section with Image -->
+        <section class="info-section clearfix">
+            <div class="info-content">
+                <h2>Understanding Mental Health</h2>
+                <p>Mental health refers to our cognitive, behavioral, and emotional wellbeing. It's all about how we think, feel, and behave. Good mental health isn't just the absence of mental health problems. It means you're in a state of wellbeing where you feel good and function well in the world.</p>
+                
+                <h3>Key Aspects of Mental Health:</h3>
+                <ul>
+                    <li><strong>Emotional well-being:</strong> How you feel about yourself and your ability to manage your feelings</li>
+                    <li><strong>Psychological well-being:</strong> Your ability to think clearly and make good decisions</li>
+                    <li><strong>Social well-being:</strong> Your relationships and how you connect with others</li>
+                </ul>
+            </div>
+            <div class="info-image">
+                <img src="undMH.jpg" alt="Mental Health Illustration">
+            </div>
+        </section>
+
+        <section class="info-section clearfix">
+            <div class="info-content">
+            <h2>Managing Depression</h2>
+            <p>Depression is more than just feeling sad - it's a serious mental health condition that affects your thoughts, feelings, and daily functioning. Here are some strategies to help manage depression:</p>
+            
+            <h3>Practical Steps:</h3>
+            <ul>
+                <li><strong>Establish routines:</strong> Create structure in your day with regular sleep, meals, and activities</li>
+                <li><strong>Stay active:</strong> Regular exercise can boost mood and energy levels</li>
+                <li><strong>Connect with others:</strong> Social support is crucial for recovery</li>
+                <li><strong>Challenge negative thoughts:</strong> Recognize and reframe pessimistic thinking patterns</li>
+                <li><strong>Seek professional help:</strong> Therapy and medication can be highly effective</li>
+            </ul>
+            <h3>Self-Care Tips:</h3>
+            <ul>
+                <li>Practice good sleep hygiene</li>
+                <li>Eat a balanced diet with mood-supporting nutrients</li>
+                <li>Engage in activities you used to enjoy, even if you don't feel like it</li>
+                <li>Be patient with yourself - recovery takes time</li>
+            </ul>
+            </div>
+            <div class="info-image">
+                <img src="mngDip.jpg" alt="Managing Depression">
+            </div>
+        </section>
+
+        <section class="info-section clearfix">
+            <div class="info-content">
+            <h2>Managing Anxiety</h2>
+            <p>Anxiety is a normal reaction to stress, but when it becomes excessive or persistent, it can interfere with daily life. Here are techniques to help manage anxiety:</p>
+            
+            <h3>Coping Strategies:</h3>
+            <ul>
+                <li><strong>Breathing exercises:</strong> Practice deep, slow breathing to activate relaxation response</li>
+                <li><strong>Grounding techniques:</strong> Use your senses to stay present (5-4-3-2-1 method)</li>
+                <li><strong>Limit caffeine and alcohol:</strong> These can worsen anxiety symptoms</li>
+                <li><strong>Challenge anxious thoughts:</strong> Ask yourself "What's the evidence for this worry?"</li>
+                <li><strong>Gradual exposure:</strong> Face fears in small, manageable steps</li>
+            </ul>
+            
+            <h3>Lifestyle Adjustments:</h3>
+            <ul>
+                <li>Prioritize regular physical activity</li>
+                <li>Practice mindfulness or meditation</li>
+                <li>Maintain a consistent sleep schedule</li>
+                <li>Limit news/social media consumption if it triggers anxiety</li>
+            </ul>
+            </div>
+            <div class="info-image">
+                <img src="mngA.jpg" alt="Managing Anxiety">
+            </div>
+        </section>
+
+        <!-- Rest of your existing content remains unchanged -->
+        <section id="resources">
+            <h2>Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-item">
+                    <h3>Information</h3>
+                    <p>Learn about mental health conditions and treatments.</p>
+                    <a href="resources/mental-health-guide.pdf" class="resource-link">Explore</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Self-Help Guides</h3>
+                    <p>Download guides for managing stress, anxiety, and more.</p>
+                    <a href="resources/self-help guides.pdf" class="resource-link">Download</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="exercises">
+            <h2>Exercises</h2>
+            <p>Explore our complete collection of <a href="exercise.html">breathing and relaxation exercises</a> to help manage stress, anxiety, and depression.</p>
+            <div class="exercise-grid">
+                <div class="exercise-item">
+                    <h3>Breathing Exercises</h3>
+                    <p>Practice deep breathing techniques for relaxation.</p>
+                    <a href="exercise.html" class="exercise-button">Start</a>  <!-- Changed button to link -->
+                </div>
+                <div class="exercise-item">
+                    <h3>Mindfulness Meditation</h3>
+                    <p>Engage in guided mindfulness meditation sessions.</p>
+                    <a href="meditation.html" class="exercise-button">Start</a>  <!-- Changed button to link -->
+                </div>
+            </div>
+        </section>
+
+        <section id="community">
+            <h2>Community</h2>
+            <p>Your feelings are valid, and you don't have to face them alone, Talking to a professional isn't a sign of weakness — it's a step toward strength Reach out today.</p>
+            <a href="community.html" class="community-link">Contact Counselors</a>
+        </section>
+
+        <section id="helpline">
+            <h2>Helpline</h2>
+            <p>If you're in crisis, please reach out to a helpline.</p>
+            <p>National Suicide Prevention Lifeline: <a href="tel:988">988</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CalmWithin - Mental Health Support</p>
+    </footer>
+
+    <div id="moodCheckModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How are you feeling today?</h2>
+            <div id="moodButtons">
+                <button data-mood="happy">Happy</button>
+                <button data-mood="ok">OK</button>
+                <button data-mood="sad">Sad</button>
+                <button data-mood="anxious">Anxious</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confetti-canvas"></div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Counselors | CalmWithin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Counselor-specific styles */
+        .counselor-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #594aa5;
+            background: white;
+            color: #594aa5;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: #594aa5;
+            color: white;
+        }
+        
+        .counselors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .counselor-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .counselor-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .counselor-header {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .counselor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e0e0ff;
+        }
+        
+        .specialty-badge {
+            display: inline-block;
+            background: #f0f0ff;
+            color: #594aa5;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        .rating {
+            color: #ffb400;
+            font-size: 0.9rem;
+            margin-top: 3px;
+        }
+        
+        .counselor-bio {
+            color: #555;
+            font-size: 0.95rem;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+        
+        .counselor-contact {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .contact-btn {
+            flex: 1;
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn.call {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .contact-btn.text {
+            background: #2196F3;
+            color: white;
+        }
+        
+        .contact-btn.email {
+            background: #9C27B0;
+            color: white;
+        }
+        
+        .contact-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .disclaimer {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .counselors-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .counselor-contact {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="community">
+        <h2>Connect With Professional Counselors</h2>
+        <p>Our verified mental health professionals are here to support you. Reach out anytime.</p>
+        
+        <div class="counselor-filters">
+            <button class="filter-btn active" data-specialty="all">All Specialties</button>
+            <button class="filter-btn" data-specialty="anxiety">Anxiety</button>
+            <button class="filter-btn" data-specialty="depression">Depression</button>
+            <button class="filter-btn" data-specialty="trauma">Trauma</button>
+            <button class="filter-btn" data-specialty="relationships">Relationships</button>
+        </div>
+
+        <div class="counselors-grid">
+            <!-- Counselor 1 -->
+            <div class="counselor-card" data-specialty="depression,anxiety">
+                <div class="counselor-header">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Dr. Sarah Johnson" class="counselor-avatar">
+                    <div>
+                        <h3>Dr. Sarah Johnson</h3>
+                        <span class="specialty-badge">Depression & Anxiety</span>
+                        <div class="rating">★★★★☆ (4.2/5)</div>
+                    </div>
+                </div>
+                <p class="counselor-bio">Licensed clinical psychologist with 12 years experience in CBT and mindfulness therapies.</p>
+                <div class="counselor-contact">
+                    <a href="tel:+18005551234" class="contact-btn call"><i class="fas fa-phone"></i> Call</a>
+                    <a href="sms:+18005551234" class="contact-btn text"><i class="fas fa-comment-alt"></i> Text</a>
+                    <a href="mailto:sarah@calmwithin.com" class="contact-btn email"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Counselor 2 -->
+            <div class="counselor-card" data-specialty="trauma">
+                <div class="counselor-header">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Chen" class="counselor-avatar">
+                    <div>
+                        <h3>Dr. Michael Chen</h3>
+                        <span class="specialty-badge">Trauma Specialist</span>
+                        <div class="rating">★★★★★ (4.8/5)</div>
+                    </div>
+                </div>
+                <p class="counselor-bio">EMDR-certified therapist specializing in PTSD and childhood trauma recovery.</p>
+                <div class="counselor-contact">
+                    <a href="tel:+18005552345" class="contact-btn call"><i class="fas fa-phone"></i> Call</a>
+                    <a href="sms:+18005552345" class="contact-btn text"><i class="fas fa-comment-alt"></i> Text</a>
+                    <a href="mailto:michael@calmwithin.com" class="contact-btn email"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Counselor 3 -->
+            <div class="counselor-card" data-specialty="relationships">
+                <div class="counselor-header">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Priya Patel" class="counselor-avatar">
+                    <div>
+                        <h3>Dr. Priya Patel</h3>
+                        <span class="specialty-badge">Relationships</span>
+                        <div class="rating">★★★★☆ (4.5/5)</div>
+                    </div>
+                </div>
+                <p class="counselor-bio">Marriage and family therapist focused on communication and attachment issues.</p>
+                <div class="counselor-contact">
+                    <a href="tel:+18005553456" class="contact-btn call"><i class="fas fa-phone"></i> Call</a>
+                    <a href="sms:+18005553456" class="contact-btn text"><i class="fas fa-comment-alt"></i> Text</a>
+                    <a href="mailto:priya@calmwithin.com" class="contact-btn email"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Counselor 4 -->
+            <div class="counselor-card" data-specialty="anxiety">
+                <div class="counselor-header">
+                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Dr. David Wilson" class="counselor-avatar">
+                    <div>
+                        <h3>Dr. David Wilson</h3>
+                        <span class="specialty-badge">Anxiety Disorders</span>
+                        <div class="rating">★★★★☆ (4.3/5)</div>
+                    </div>
+                </div>
+                <p class="counselor-bio">Specializes in exposure therapy for panic disorders and social anxiety.</p>
+                <div class="counselor-contact">
+                    <a href="tel:+18005554567" class="contact-btn call"><i class="fas fa-phone"></i> Call</a>
+                    <a href="sms:+18005554567" class="contact-btn text"><i class="fas fa-comment-alt"></i> Text</a>
+                    <a href="mailto:david@calmwithin.com" class="contact-btn email"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Counselor 5 -->
+            <div class="counselor-card" data-specialty="depression">
+                <div class="counselor-header">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Dr. Emily Rodriguez" class="counselor-avatar">
+                    <div>
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <span class="specialty-badge">Depression</span>
+                        <div class="rating">★★★★★ (4.7/5)</div>
+                    </div>
+                </div>
+                <p class="counselor-bio">Uses positive psychology and behavioral activation techniques.</p>
+                <div class="counselor-contact">
+                    <a href="tel:+18005555678" class="contact-btn call"><i class="fas fa-phone"></i> Call</a>
+                    <a href="sms:+18005555678" class="contact-btn text"><i class="fas fa-comment-alt"></i> Text</a>
+                    <a href="mailto:emily@calmwithin.com" class="contact-btn email"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p><i class="fas fa-info-circle"></i> Note: Response times may vary. For immediate crisis support, please call <a href="tel:988">988</a> (US Suicide & Crisis Lifeline).</p>
+        </div>
+    </section>
+
+    <script>
+        // Counselor Filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const specialty = btn.dataset.specialty;
+                const cards = document.querySelectorAll('.counselor-card');
+                
+                cards.forEach(card => {
+                    if (specialty === 'all' || card.dataset.specialty.includes(specialty)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

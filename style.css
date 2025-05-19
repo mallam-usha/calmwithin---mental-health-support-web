@@ -1,0 +1,329 @@
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    padding: 70px 0 1rem 0;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #594aa5;
+}
+
+.auth-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-links a {
+    margin-left: 15px;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #594aa5;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-links a:hover {
+    background-color: #3a5a80;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+    background: linear-gradient(rgba(89, 74, 165, 0.7), rgba(89, 74, 165, 0.7)), 
+                url('https://images.unsplash.com/photo-1530092285049-1c42085fd395?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+#hero h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.quote-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.quote-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.quote-box:hover {
+    transform: translateY(-5px);
+}
+
+.quote-box i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.quote-box p {
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* ===== Main Content Sections ===== */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Resource Grid ===== */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.resource-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.resource-item:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Exercise Grid ===== */
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.exercise-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.exercise-item:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Button Styles ===== */
+.btn, .resource-link, .exercise-button, .community-link {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    background-color: #594aa5;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover, .resource-link:hover, .exercise-button:hover, .community-link:hover {
+    background-color: #3a5a80;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resource-link {
+    background-color: #007bff;
+}
+
+.community-link {
+    background-color: #17a2b8;
+}
+
+/* ===== Modal Styles ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#moodButtons button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#moodButtons button:hover {
+    transform: scale(1.05);
+}
+
+#moodButtons button[data-mood="happy"] {
+    background-color: #28a745;
+    color: white;
+}
+
+#moodButtons button[data-mood="ok"] {
+    background-color: #ffc107;
+    color: black;
+}
+
+#moodButtons button[data-mood="sad"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+#moodButtons button[data-mood="anxious"] {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ===== Confetti Effect ===== */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 2rem;
+    }
+    
+    #hero h3 {
+        font-size: 1.2rem;
+    }
+    
+    .quote-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quote-box {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    
+    .auth-links {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .logo {
+        position: static;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+}

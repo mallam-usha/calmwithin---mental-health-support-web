@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercises for Mental Wellness</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        h1, h2, h3 {
+            color: #3a506b;
+        }
+        
+        .exercise-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .exercise-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .exercise-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #5bc0be;
+        }
+        
+        .timer-container {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3a506b;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5bc0be;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a506b;
+        }
+        
+        .visual-guide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .breathing-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #5bc0be;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transition: all 1s ease-in-out;
+        }
+        
+        .instructions {
+            background-color: #eef4f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .benefits {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        
+        .benefits li {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Breathing Exercises for Mental Wellness</h1>
+    <p>Practice these breathing techniques to help manage stress, anxiety, and depression symptoms.</p>
+    
+    <!-- Box Breathing Exercise -->
+    <div class="exercise-container" id="box-breathing">
+        <div class="exercise-header">
+            <div class="exercise-icon">☐</div>
+            <h2>Box Breathing</h2>
+        </div>
+        <p>A simple technique used by Navy SEALs to stay calm and focused in stressful situations.</p>
+        
+        <div class="timer-container" id="box-timer">4-4-4-4</div>
+        
+        <div class="visual-guide">
+            <div class="breathing-circle" id="box-circle">Breathe In</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="startBoxBreathing()">Start</button>
+            <button onclick="stopBreathing()">Pause</button>
+            <button onclick="resetBoxBreathing()">Reset</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to practice Box Breathing:</h3>
+            <ol>
+                <li>Inhale deeply through your nose for 4 seconds</li>
+                <li>Hold your breath for 4 seconds</li>
+                <li>Exhale slowly through your mouth for 4 seconds</li>
+                <li>Hold your breath for 4 seconds</li>
+                <li>Repeat the cycle for 3-5 minutes</li>
+            </ol>
+        </div>
+        
+        <div class="benefits">
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Reduces stress and anxiety quickly</li>
+                <li>Improves focus and concentration</li>
+                <li>Helps regulate the nervous system</li>
+                <li>Can be done anywhere, anytime</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 4-7-8 Breathing Exercise -->
+    <div class="exercise-container" id="four-seven-eight">
+        <div class="exercise-header">
+            <div class="exercise-icon">🌬️</div>
+            <h2>4-7-8 Breathing</h2>
+        </div>
+        <p>Developed by Dr. Andrew Weil, this technique promotes relaxation and better sleep.</p>
+        
+        <div class="timer-container" id="four-seven-eight-timer">4-7-8</div>
+        
+        <div class="visual-guide">
+            <div class="breathing-circle" id="four-seven-eight-circle">Breathe In</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="startFourSevenEight()">Start</button>
+            <button onclick="stopBreathing()">Pause</button>
+            <button onclick="resetFourSevenEight()">Reset</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to practice 4-7-8 Breathing:</h3>
+            <ol>
+                <li>Place the tip of your tongue behind your upper front teeth</li>
+                <li>Exhale completely through your mouth</li>
+                <li>Close your mouth and inhale quietly through your nose for 4 seconds</li>
+                <li>Hold your breath for 7 seconds</li>
+                <li>Exhale completely through your mouth for 8 seconds</li>
+                <li>Repeat the cycle 3-4 times</li>
+            </ol>
+        </div>
+        
+        <div class="benefits">
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Promotes relaxation and reduces anxiety</li>
+                <li>Helps with insomnia and sleep difficulties</li>
+                <li>Can help manage cravings and emotional responses</li>
+                <li>Lowers heart rate and blood pressure</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Diaphragmatic Breathing Exercise -->
+    <div class="exercise-container" id="diaphragmatic">
+        <div class="exercise-header">
+            <div class="exercise-icon">🫁</div>
+            <h2>Diaphragmatic Breathing</h2>
+        </div>
+        <p>Also known as belly breathing, this technique engages the diaphragm for deeper relaxation.</p>
+        
+        <div class="timer-container" id="diaphragmatic-timer">Inhale-Exhale</div>
+        
+        <div class="visual-guide">
+            <div class="breathing-circle" id="diaphragmatic-circle">Breathe In</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="startDiaphragmatic()">Start</button>
+            <button onclick="stopBreathing()">Pause</button>
+            <button onclick="resetDiaphragmatic()">Reset</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to practice Diaphragmatic Breathing:</h3>
+            <ol>
+                <li>Lie on your back or sit comfortably with one hand on your chest and one on your belly</li>
+                <li>Inhale slowly through your nose for 4-5 seconds, feeling your belly rise</li>
+                <li>Keep your chest relatively still</li>
+                <li>Exhale slowly through pursed lips for 6-7 seconds, feeling your belly fall</li>
+                <li>Repeat for 5-10 minutes</li>
+            </ol>
+        </div>
+        
+        <div class="benefits">
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Reduces the body's stress response</li>
+                <li>Improves oxygen exchange</li>
+                <li>Lowers heart rate and blood pressure</li>
+                <li>Helps manage symptoms of depression and anxiety disorders</li>
+                <li>Strengthens the diaphragm</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Variables to track breathing exercises
+        let boxInterval, fourSevenEightInterval, diaphragmaticInterval;
+        let boxPhase = 0, fourSevenEightPhase = 0, diaphragmaticPhase = 0;
+        
+        // Box Breathing Functions
+        function startBoxBreathing() {
+            stopBreathing(); // Stop any running exercises
+            const circle = document.getElementById('box-circle');
+            const timer = document.getElementById('box-timer');
+            
+            boxInterval = setInterval(() => {
+                boxPhase = (boxPhase + 1) % 4;
+                
+                switch(boxPhase) {
+                    case 0: // Inhale
+                        circle.textContent = "Breathe In";
+                        circle.style.backgroundColor = "#5bc0be";
+                        circle.style.transform = "scale(1.2)";
+                        timer.textContent = "4-4-4-4";
+                        break;
+                    case 1: // Hold after inhale
+                        circle.textContent = "Hold";
+                        circle.style.backgroundColor = "#3a506b";
+                        circle.style.transform = "scale(1)";
+                        timer.textContent = "4-4-4-4";
+                        break;
+                    case 2: // Exhale
+                        circle.textContent = "Breathe Out";
+                        circle.style.backgroundColor = "#1a936f";
+                        circle.style.transform = "scale(0.8)";
+                        timer.textContent = "4-4-4-4";
+                        break;
+                    case 3: // Hold after exhale
+                        circle.textContent = "Hold";
+                        circle.style.backgroundColor = "#114b5f";
+                        circle.style.transform = "scale(1)";
+                        timer.textContent = "4-4-4-4";
+                        break;
+                }
+            }, 4000);
+        }
+        
+        function resetBoxBreathing() {
+            clearInterval(boxInterval);
+            const circle = document.getElementById('box-circle');
+            const timer = document.getElementById('box-timer');
+            
+            circle.textContent = "Breathe In";
+            circle.style.backgroundColor = "#5bc0be";
+            circle.style.transform = "scale(1)";
+            timer.textContent = "4-4-4-4";
+            boxPhase = 0;
+        }
+        
+        // 4-7-8 Breathing Functions
+        function startFourSevenEight() {
+            stopBreathing(); // Stop any running exercises
+            const circle = document.getElementById('four-seven-eight-circle');
+            const timer = document.getElementById('four-seven-eight-timer');
+            
+            fourSevenEightInterval = setInterval(() => {
+                fourSevenEightPhase = (fourSevenEightPhase + 1) % 3;
+                
+                switch(fourSevenEightPhase) {
+                    case 0: // Inhale (4 seconds)
+                        circle.textContent = "Breathe In";
+                        circle.style.backgroundColor = "#5bc0be";
+                        circle.style.transform = "scale(1.2)";
+                        timer.textContent = "4-7-8";
+                        setTimeout(() => {
+                            fourSevenEightPhase = 1;
+                            circle.textContent = "Hold";
+                            circle.style.backgroundColor = "#3a506b";
+                            circle.style.transform = "scale(1)";
+                            timer.textContent = "4-7-8";
+                        }, 4000);
+                        break;
+                    case 1: // Hold (7 seconds)
+                        setTimeout(() => {
+                            fourSevenEightPhase = 2;
+                            circle.textContent = "Breathe Out";
+                            circle.style.backgroundColor = "#1a936f";
+                            circle.style.transform = "scale(0.8)";
+                            timer.textContent = "4-7-8";
+                        }, 7000);
+                        break;
+                    case 2: // Exhale (8 seconds)
+                        setTimeout(() => {
+                            fourSevenEightPhase = 0;
+                            circle.textContent = "Breathe In";
+                            circle.style.backgroundColor = "#5bc0be";
+                            circle.style.transform = "scale(1.2)";
+                            timer.textContent = "4-7-8";
+                        }, 8000);
+                        break;
+                }
+            }, 19000); // Total cycle time (4+7+8)
+        }
+        
+        function resetFourSevenEight() {
+            clearInterval(fourSevenEightInterval);
+            const circle = document.getElementById('four-seven-eight-circle');
+            const timer = document.getElementById('four-seven-eight-timer');
+            
+            circle.textContent = "Breathe In";
+            circle.style.backgroundColor = "#5bc0be";
+            circle.style.transform = "scale(1)";
+            timer.textContent = "4-7-8";
+            fourSevenEightPhase = 0;
+        }
+        
+        // Diaphragmatic Breathing Functions
+        function startDiaphragmatic() {
+            stopBreathing(); // Stop any running exercises
+            const circle = document.getElementById('diaphragmatic-circle');
+            const timer = document.getElementById('diaphragmatic-timer');
+            
+            diaphragmaticInterval = setInterval(() => {
+                diaphragmaticPhase = (diaphragmaticPhase + 1) % 2;
+                
+                if (diaphragmaticPhase === 0) { // Inhale (5 seconds)
+                    circle.textContent = "Breathe In";
+                    circle.style.backgroundColor = "#5bc0be";
+                    circle.style.transform = "scale(1.2)";
+                    timer.textContent = "Inhale (5s)";
+                    
+                    setTimeout(() => {
+                        diaphragmaticPhase = 1;
+                        circle.textContent = "Breathe Out";
+                        circle.style.backgroundColor = "#1a936f";
+                        circle.style.transform = "scale(0.8)";
+                        timer.textContent = "Exhale (7s)";
+                    }, 5000);
+                } else { // Exhale (7 seconds)
+                    setTimeout(() => {
+                        diaphragmaticPhase = 0;
+                        circle.textContent = "Breathe In";
+                        circle.style.backgroundColor = "#5bc0be";
+                        circle.style.transform = "scale(1.2)";
+                        timer.textContent = "Inhale (5s)";
+                    }, 7000);
+                }
+            }, 12000); // Total cycle time (5+7)
+        }
+        
+        function resetDiaphragmatic() {
+            clearInterval(diaphragmaticInterval);
+            const circle = document.getElementById('diaphragmatic-circle');
+            const timer = document.getElementById('diaphragmatic-timer');
+            
+            circle.textContent = "Breathe In";
+            circle.style.backgroundColor = "#5bc0be";
+            circle.style.transform = "scale(1)";
+            timer.textContent = "Inhale-Exhale";
+            diaphragmaticPhase = 0;
+        }
+        
+        // General Functions
+        function stopBreathing() {
+            clearInterval(boxInterval);
+            clearInterval(fourSevenEightInterval);
+            clearInterval(diaphragmaticInterval);
+        }
+    </script>
+</body>
+</html>

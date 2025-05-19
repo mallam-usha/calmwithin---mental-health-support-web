@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness Meditation Exercises</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        h1, h2, h3 {
+            color: #3a506b;
+        }
+        
+        .meditation-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .meditation-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .meditation-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #5bc0be;
+        }
+        
+        .timer-container {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3a506b;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5bc0be;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a506b;
+        }
+        
+        .visual-guide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .meditation-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #5bc0be;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transition: all 1s ease-in-out;
+        }
+        
+        .instructions {
+            background-color: #eef4f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .benefits {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        
+        .benefits li {
+            margin-bottom: 8px;
+        }
+        
+        .guided-audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mindfulness Meditation Exercises</h1>
+    <p>Practice these mindfulness techniques to help reduce stress, anxiety, and improve mental clarity.</p>
+    
+    <!-- Basic Mindfulness Meditation -->
+    <div class="meditation-container" id="basic-mindfulness">
+        <div class="meditation-header">
+            <div class="meditation-icon">🧘</div>
+            <h2>Basic Mindfulness Meditation</h2>
+        </div>
+        <p>A simple practice to cultivate present-moment awareness.</p>
+        
+        <div class="timer-container" id="basic-timer">00:00</div>
+        
+        <div class="visual-guide">
+            <div class="meditation-circle" id="basic-circle">Breathe</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="startBasicMeditation()">Start</button>
+            <button onclick="pauseMeditation()">Pause</button>
+            <button onclick="resetBasicMeditation()">Reset</button>
+            <button onclick="setTimer(300)">5 min</button>
+            <button onclick="setTimer(600)">10 min</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to practice Basic Mindfulness:</h3>
+            <ol>
+                <li>Find a quiet, comfortable place to sit</li>
+                <li>Close your eyes or soften your gaze</li>
+                <li>Bring attention to your natural breathing</li>
+                <li>When your mind wanders, gently return focus to your breath</li>
+                <li>Continue for your chosen duration</li>
+            </ol>
+        </div>
+        
+        <div class="benefits">
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Reduces stress and anxiety</li>
+                <li>Improves focus and concentration</li>
+                <li>Enhances emotional regulation</li>
+                <li>Increases self-awareness</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Body Scan Meditation -->
+    <div class="meditation-container" id="body-scan">
+        <div class="meditation-header">
+            <div class="meditation-icon">👁️</div>
+            <h2>Body Scan Meditation</h2>
+        </div>
+        <p>A practice to develop body awareness and release tension.</p>
+        
+        <div class="timer-container" id="scan-timer">00:00</div>
+        
+        <div class="visual-guide">
+            <div class="meditation-circle" id="scan-circle">Begin</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="startBodyScan()">Start</button>
+            <button onclick="pauseMeditation()">Pause</button>
+            <button onclick="resetBodyScan()">Reset</button>
+            <button onclick="setScanTimer(420)">7 min</button>
+            <button onclick="setScanTimer(900)">15 min</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to practice Body Scan:</h3>
+            <ol>
+                <li>Lie down or sit comfortably</li>
+                <li>Bring attention to your toes and feet</li>
+                <li>Gradually move attention up through each body part</li>
+                <li>Notice sensations without judgment</li>
+                <li>Release tension as you scan each area</li>
+                <li>Complete the scan by bringing attention to your whole body</li>
+            </ol>
+            
+            <audio controls class="guided-audio">
+                <source src="body-scan-guide.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <div class="benefits">
+            <h3>Benefits:</h3>
+            <ul>
+                <li>Reduces physical tension</li>
+                <li>Improves mind-body connection</li>
+                <li>Helps with pain management</li>
+                <li>Promotes relaxation and better sleep</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Variables for meditation timers
+        let basicInterval, scanInterval;
+        let basicSeconds = 0, scanSeconds = 0;
+        let isBasicRunning = false, isScanRunning = false;
+        
+        // Basic Meditation Functions
+        function startBasicMeditation() {
+            if (!isBasicRunning) {
+                pauseMeditation(); // Stop any other running meditation
+                isBasicRunning = true;
+                const circle = document.getElementById('basic-circle');
+                
+                basicInterval = setInterval(() => {
+                    basicSeconds++;
+                    updateBasicTimer();
+                    
+                    // Change circle text periodically
+                    if (basicSeconds % 10 < 5) {
+                        circle.textContent = "Breathe In";
+                        circle.style.backgroundColor = "#5bc0be";
+                        circle.style.transform = "scale(1.1)";
+                    } else {
+                        circle.textContent = "Breathe Out";
+                        circle.style.backgroundColor = "#1a936f";
+                        circle.style.transform = "scale(0.9)";
+                    }
+                }, 1000);
+            }
+        }
+        
+        function updateBasicTimer() {
+            const minutes = Math.floor(basicSeconds / 60);
+            const seconds = basicSeconds % 60;
+            document.getElementById('basic-timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        function resetBasicMeditation() {
+            clearInterval(basicInterval);
+            basicSeconds = 0;
+            isBasicRunning = false;
+            document.getElementById('basic-timer').textContent = "00:00";
+            const circle = document.getElementById('basic-circle');
+            circle.textContent = "Breathe";
+            circle.style.backgroundColor = "#5bc0be";
+            circle.style.transform = "scale(1)";
+        }
+        
+        // Body Scan Functions
+        function startBodyScan() {
+            if (!isScanRunning) {
+                pauseMeditation(); // Stop any other running meditation
+                isScanRunning = true;
+                const circle = document.getElementById('scan-circle');
+                
+                scanInterval = setInterval(() => {
+                    scanSeconds++;
+                    updateScanTimer();
+                    
+                    // Change circle text periodically to guide attention
+                    const bodyParts = ["Feet", "Legs", "Hips", "Back", "Hands", "Arms", 
+                                     "Shoulders", "Neck", "Face", "Head", "Whole Body"];
+                    const index = Math.min(Math.floor(scanSeconds / (scanDuration/bodyParts.length)), bodyParts.length-1);
+                    circle.textContent = bodyParts[index];
+                }, 1000);
+            }
+        }
+        
+        let scanDuration = 420; // Default 7 minutes
+        
+        function setScanTimer(seconds) {
+            scanDuration = seconds;
+            resetBodyScan();
+        }
+        
+        function updateScanTimer() {
+            const minutes = Math.floor(scanSeconds / 60);
+            const seconds = scanSeconds % 60;
+            document.getElementById('scan-timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        function resetBodyScan() {
+            clearInterval(scanInterval);
+            scanSeconds = 0;
+            isScanRunning = false;
+            document.getElementById('scan-timer').textContent = "00:00";
+            const circle = document.getElementById('scan-circle');
+            circle.textContent = "Begin";
+            circle.style.backgroundColor = "#5bc0be";
+            circle.style.transform = "scale(1)";
+        }
+        
+        // General Functions
+        function pauseMeditation() {
+            clearInterval(basicInterval);
+            clearInterval(scanInterval);
+            isBasicRunning = false;
+            isScanRunning = false;
+        }
+        
+        function setTimer(seconds) {
+            basicSeconds = 0;
+            resetBasicMeditation();
+            document.getElementById('basic-timer').textContent = 
+                `${Math.floor(seconds/60).toString().padStart(2, '0')}:00`;
+        }
+    </script>
+</body>
+</html>
