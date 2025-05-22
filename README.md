@@ -15,6 +15,7 @@ On this website, users can easily navigate across different pages to find the in
 
 The Home page of our project will me very calming, as soon as you open it your brain becomes very peacefull and it lets you to login or register into the website and provide various Resourses, Exercises, Community and Helpline.
 
+
 <img width="958" alt="image" src="https://github.com/user-attachments/assets/fd1c785a-9137-4ced-828a-d53e4409ec8e" />
 
 
@@ -104,7 +105,9 @@ As we konw that Mental health is a critical aspect of overall well-being, yet it
 
     - Integrating AI chatbots for crisis response.
 
+
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/ef220716-8acc-4645-8648-24140d8eee1f" />
+
 
 ## 🧠 Features
 
@@ -112,20 +115,29 @@ As we konw that Mental health is a critical aspect of overall well-being, yet it
 - 📚 **Educational Resources**: Articles and guides about mental health topics, self-care tips, and wellness practices.
 - 👩‍⚕️ **Professional Directory**: Find licensed therapists, counselors, and mental health services in your area.
 
+
 <img width="944" alt="image" src="https://github.com/user-attachments/assets/e8e29cdd-99c1-4140-bf6f-c64ee08cbc5b" />
+
 
 - ☎️ **Crisis Helpline Access**: Quick access to national and local helplines.
 - 🔐 **User Privacy First**: No personal data required for anonymous features.
 - **Exercises** : This site provides Breathing Exercise and meditation for practice.
 
+
 <img width="605" alt="image" src="https://github.com/user-attachments/assets/c322b37b-3c89-4893-91c5-3b127c2113e2" />
+
+
 - Mindfullness Exercises to practice
+
+
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/09249cc2-7681-47ea-aef3-c0e16505b481" />
 
 ## Deployment
 - The website was deployed to Github pages.
 
+
 - [![Live Demo](https://img.shields.io/badge/View-Live_Demo-green?style=for-the-badge)](https://mallam-usha.github.io/calmwithin---mental-health-support-web/)
+
 
 ## 🛠️ Technologies Used
 - **Frontend**: HTML5, CSS3, JavaScript
