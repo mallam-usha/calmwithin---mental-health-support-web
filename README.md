@@ -132,6 +132,18 @@ As we konw that Mental health is a critical aspect of overall well-being, yet it
 
 <img width="631" alt="image" src="https://github.com/user-attachments/assets/09249cc2-7681-47ea-aef3-c0e16505b481" />
 
+
+
+- **Resources** : This website provides you the mental health guides and Self help guides, it also let you download from the resource section.
+
+<img width="937" alt="image" src="https://github.com/user-attachments/assets/7df3a200-ad23-4746-87d4-e53c8401814c" />
+
+
+
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/ccba1110-7dc3-41ee-9532-892b894c0734" />
+
+
+
 ## Deployment
 - The website was deployed to Github pages.
 
