@@ -111,11 +111,16 @@ As we konw that Mental health is a critical aspect of overall well-being, yet it
 - ✅ **Chat**: Connect with Counsellors in a supportive, judgment-free environment.
 - 📚 **Educational Resources**: Articles and guides about mental health topics, self-care tips, and wellness practices.
 - 👩‍⚕️ **Professional Directory**: Find licensed therapists, counselors, and mental health services in your area.
+
+<img width="944" alt="image" src="https://github.com/user-attachments/assets/e8e29cdd-99c1-4140-bf6f-c64ee08cbc5b" />
+
 - ☎️ **Crisis Helpline Access**: Quick access to national and local helplines.
 - 🔐 **User Privacy First**: No personal data required for anonymous features.
-- **Exercises** : This site provides Breathing and stress free Exercise for practice.
+- **Exercises** : This site provides Breathing Exercise and meditation for practice.
 
-
+<img width="605" alt="image" src="https://github.com/user-attachments/assets/c322b37b-3c89-4893-91c5-3b127c2113e2" />
+- Mindfullness Exercises to practice
+<img width="631" alt="image" src="https://github.com/user-attachments/assets/09249cc2-7681-47ea-aef3-c0e16505b481" />
 
 ## Deployment
 - The website was deployed to Github pages.
@@ -131,13 +136,17 @@ project-folder/
 
 ├── index.html # Homepage
 
+├── login.html # Homepage
+
+├── signup.html # Homepage
+
 ├── resources.html # Mental health resources
 
 ├── umh.html # understand about mental health
 
-├── md.html # Know about managing Dipression
+├── mngDip.html # Know about managing Dipression
 
-├── managing Anxiety # To know how to manage Anxiety
+├── mngA.html # To know how to manage Anxiety
 
 ├── exercise.html # exercises for practice
 
