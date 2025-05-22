@@ -104,12 +104,7 @@ As we konw that Mental health is a critical aspect of overall well-being, yet it
 
     - Integrating AI chatbots for crisis response.
 
-# picture 2
-
-
-
-
-
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/ef220716-8acc-4645-8648-24140d8eee1f" />
 
 ## 🧠 Features
 
@@ -125,7 +120,7 @@ As we konw that Mental health is a critical aspect of overall well-being, yet it
 ## Deployment
 - The website was deployed to Github pages.
 
-- [View the project again here](https://mallam-usha.github.io/calmwithin---mental-health-support-web/).
+- [![Live Demo](https://img.shields.io/badge/View-Live_Demo-green?style=for-the-badge)](https://mallam-usha.github.io/calmwithin---mental-health-support-web/)
 
 ## 🛠️ Technologies Used
 - **Frontend**: HTML5, CSS3, JavaScript
@@ -145,7 +140,6 @@ project-folder/
 ├── managing Anxiety # To know how to manage Anxiety
 
 ├── exercise.html # exercises for practice
-
 
 ├── community.html # chat page
 
